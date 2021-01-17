@@ -9,6 +9,7 @@ public class MessageListener extends ListenerAdapter {
 
     @Override
     public void onGuildMessageReceived(GuildMessageReceivedEvent event) {
+        if (event.getChannel().getIdLong() != 796862435499049010L) return;
         event.getMessage().addReaction(batemote).queue();
     }
 }
