@@ -11,7 +11,7 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         jda = JDABuilder.createDefault(System.getenv("TOKEN"))
-                .addEventListeners(new MessageListener())
+                .addEventListeners(new MessageListener(), new MentionListener())
                 .build();
         jda.awaitReady();
         MessageListener.batemote = jda.getEmoteById(797601839717023744L);
