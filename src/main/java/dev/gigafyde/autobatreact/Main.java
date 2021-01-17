@@ -14,7 +14,7 @@ public class Main {
                 .addEventListeners(new MessageListener())
                 .build();
         jda.awaitReady();
-        MessageListener.batemote = jda.getEmoteById("797601839717023744");
+        MessageListener.batemote = jda.getEmoteById(797601839717023744L);
         log.info("Bat bot activated");
     }
 }
