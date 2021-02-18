@@ -15,7 +15,7 @@ public class Main {
                 .build();
         jda.awaitReady();
         MessageListener.batemote = jda.getEmoteById(797601839717023744L);
-        MessageListener.forgcar = jda.getEmoteById(812071767769481257L);
+        MessageListener.forgcar = jda.getEmoteById(811558455721590808L);
         MentionListener.batping = jda.getEmoteById(800423202266021899L);
         log.info("Bat bot activated");
     }
