@@ -14,7 +14,7 @@ public class MessageListener extends ListenerAdapter {
             event.getMessage().addReaction(batemote).queue();
             return;
         }
-        if (event.getMessage().getContentStripped().toLowerCase().contains("forg")) {
+        if (event.getMessage().getContentStripped().toLowerCase().contains("forg") || event.getMessage().getContentStripped().toLowerCase().contains("brum brum")) {
             event.getMessage().addReaction(forgcar).queue();
         }
     }
