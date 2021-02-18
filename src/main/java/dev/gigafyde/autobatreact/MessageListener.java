@@ -6,10 +6,16 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 public class MessageListener extends ListenerAdapter {
     public static Emote batemote;
+    public static Emote forgcar;
 
     @Override
     public void onGuildMessageReceived(GuildMessageReceivedEvent event) {
-        if (event.getChannel().getIdLong() != 796862435499049010L) return;
-        event.getMessage().addReaction(batemote).queue();
+        if (event.getChannel().getIdLong() == 796862435499049010L) {
+            event.getMessage().addReaction(batemote).queue();
+            return;
+        }
+        if (event.getMessage().getContentStripped().toLowerCase().contains("forg")) {
+            event.getMessage().addReaction(forgcar).queue();
+        }
     }
 }
